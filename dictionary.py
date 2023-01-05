@@ -167,8 +167,10 @@ alien_3 = {'colo': 'red', 'point': '25'}
 alien_4 = {'colo': 'blue', 'point': '54'}
 alien_5 = {'colo': 'purple', 'point': '65'}
 alien_6 = {'colo': 'magnet', 'point': '15'}
+alien_7 = {'colo': 'green', 'point': '5'}
 
 aliens = [alien_2, alien_3, alien_4, alien_5, alien_6]
 
 for alien in aliens:
     print(alien)
+#i was finally able to push you to git through git desktop
