@@ -84,3 +84,202 @@ def build_person(firstname, lastname, age=None):
 
 musical = build_person('jimi', 'saira', age=35)
 print(musical)
+
+def get_formattted_name(first_namee, last_namee):
+    """Return a full name formatted"""
+    fullnamee = f"{first_namee} {last_namee}"
+    return fullnamee.title()
+    
+while True:
+    print(f"\nPleasetell me your name")
+    print("(Enter 'q' to quit execution)")
+    f_name = input("First Name: ")
+    if f_name == 'q':
+        break
+    l_name = input("Last Name: ")
+    if l_name == 'q':
+        break
+
+    formattted_name = get_formattted_name(f_name, l_name)
+    print(f"\nHello, {formattted_name}")
+
+def city_country(city_name, city_count):
+    """Return the name of the city and country it is in"""
+    city = f"{city_name}, {city_count}"
+    return f"\n{city_name.title()} {city_count.title()}"
+
+print(city_country("'New York'", "'United States'"))
+print(city_country("'New Jersy'", "'america'"))
+print(city_country("'Land", "'Destiny Obs'"))
+        
+    
+def make_album(artist, title, songs=None):
+    """Builds Dictionary Describing a music"""
+    album = {'artist': artist, 'title': title, 'songs': songs}
+    return album
+
+while True:
+    print("\nEnter album information")
+    print("(Enter 'q' to terminate)")
+
+    artist = input("Artisit Name: ")
+    if artist == 'q':
+        break
+    title = input("Title Name: ")
+    if title == 'q':
+        break
+
+    song = input("Song Number (Optional): ")
+    if song == 'q':
+        break
+
+    album = make_album(artist, title, song)
+    print(album)
+
+    
+##passing a list
+
+#write program that greet number of users
+
+# def greet_people(names):
+#     """Greeting users by names given"""
+#     for name in names:
+#         msg = f"Hello, {name.title()}"
+#         print(msg)
+#         return msg
+
+# while True:
+#     print("\nWhat is your name")
+#     print("(Enter 'q' to terminate)")
+#     name = input("Name: ")
+#     if song == 'q':
+#         break
+
+# Username = f"Hello, {name.title()}"
+# greet_people(Username)
+
+
+def greet_people(names):
+    """Greeting users by names given"""
+    for name in names:
+        msg = f"\nHello, {name.title()}"
+        print(msg)
+        
+
+Username = ['hannah', 'tobi', 'justin']
+greet_people(Username)
+
+
+
+#adding data to a list of emmpy dictionaries using pop
+#structuring code a little bit nicer
+
+def print_models(unprinted_designs, completed_designs):
+    """Simulate pricing each design, until none are left."""
+    while unprinted_designs:
+        current_designs = unprinted_designs.pop()
+        print(f"Printing Model: {current_designs}")
+        completed_designs.append(current_designs)
+
+def show_completed_models(completed_designs):
+    """Show all completed models"""
+    print("\nThe following Designs are complete: ")
+    for completed_design in completed_designs:
+        print(completed_design)
+
+unprinted_designs = ['Phone Case', 'Robot pendant', 'dodecaheron']
+completed_designs = []
+
+#creating slice from list
+print_models(unprinted_designs, completed_designs)
+#show_completed_models(completed_designs)
+
+print(unprinted_designs)
+print(completed_designs)
+print("\n")
+
+# make a short list of text and pass text in them
+def Short_text(msgs):
+    """Greeting users"""
+    for msg in msgs:
+        print(msg)
+        
+
+msgs = ['Hi', 'How are you?', 'Hello, beautiful']
+Short_text(msgs)
+print("\n")
+
+
+def send_msgs(text_msg, sent_txt_msgs):
+    """Print msg to and add them to another gorup"""
+    while text_msg:
+        current_msg = text_msg.pop()
+        print(f"Available Msg: {current_msg}")
+        sent_txt_msgs.append(current_msg)
+
+def show_sent_text(sent_txt_msgs):
+    """Show all sent text"""
+    print("\nThe following Text are sent: ")
+    for sent_txt_msg in sent_txt_msgs:
+        print(sent_txt_msg)
+
+text_msg = ['Hi', 'How are you?', 'Hello, beautiful']
+sent_txt_msgs = []
+
+send_msgs(text_msg[:], sent_txt_msgs)
+show_sent_text(sent_txt_msgs)
+
+print("\t")
+print(text_msg)
+print(sent_txt_msgs)
+print("\t")
+
+
+
+#*passing a number of arguments creating empty tuple 
+def make_pizza(size, *topping):
+    """Print the list of all possible toppings"""
+    print(f"\nMaking a {size} - Pizza with the following topping: ")
+    for toppings in topping:
+        print(f"- {toppings.title()}")
+
+make_pizza(16, 'pepperoni')
+make_pizza(21, 'maggi', 'salt', 'sugar', 'tomato')
+
+
+#creates an empty dictionary  
+def build_profile(first, last, middle=None, **user_info):
+    """Build a dictionary containing everything we know about a user"""
+    user_info['first_name'] = first.title()
+    user_info['last_name'] = last.title()
+    user_info['Middle'] = middle.title()
+    return user_info
+
+user_profile = build_profile('Obueh', 'Destiny', 'Onyekachi', 
+                             location = 'Lagos', field= 'Programiing')
+print(user_profile)
+ 
+
+def sandwich_ing(*args):
+    """print a summary of the sandwich ing being ordered"""
+    print("\nThese are the sandwich ingredients")
+    for arg in args:
+        print(f"- {arg}")
+        # if arg == :
+        #     print(f"- is empty")
+
+sandwich_ing('')
+sandwich_ing('salad', 'curry', 'maggi')
+sandwich_ing('moi-moi')
+
+
+def abt_car(manufac, model, **car):
+    """Build a dictionary containing everything about a car"""
+    car['Car Manufacturer'] = manufac.title()
+    car['Car Model'] = model.title()
+    return car
+
+car = abt_car('sabaru', 'outback', color = 'blue', tow_package= False)
+print(car)
+ 
+

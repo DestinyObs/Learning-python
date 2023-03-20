@@ -6,7 +6,7 @@ message = f"My First bike was {bycicle[2].title()}"
 print(message)
 
 #chapter 3 taks
-Names = ['Fife','Olu','Bishop','terah','Hills','Dayo']
+Names = ['Fife','Bola','Bishop','terah','Hills','Dayo']
 print(Names[0].title())
 print(Names[1].title())
 print(Names[2].title())
