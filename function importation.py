@@ -1,6 +1,9 @@
 import functions
 #import functions
 #use from module_name import function_name
+
+
+
 functions.make_pizza(16, 'pepperoni')
 functions.make_pizza(21, 'maggi', 'salt', 'sugar', 'potatoe')
 
@@ -32,6 +35,10 @@ F.make_pizza(12, 'maggi')
 
 from functions import *
 make_pizza(12, 'salt')
+
+courses = "nnew one"
+print(courses)
+
 
 #OOP oriented programming 
 

@@ -8,20 +8,22 @@ print(alien_0['points'])
 new_points = alien_0['points']
 print(f"you have earned {new_points} points!")
 
-# all you need to do is slestect the name then the key
+
+# all you need to do is select the name then the key
 alien_0['x_position'] = 0
 alien_0['y_position'] = 25
 
 print(alien_0)
 
-# list are sorted and idctionaries are in abituary order 
+
+# list are sorted and dctionaries are in abituary order 
 
 alien_1 = {}
 
 alien_1['color'] = 'blue'
-alien_1['happy'] = 'happy'
+alien_1['mood'] = 'happy'
 
-print(f"the alien is {alien_1['happy']}")
+print(f"the alien is {alien_1['mood']}")
 alien_1['point'] = 100
 alien_1['married'] = 'no'
 
@@ -42,6 +44,8 @@ alien_0['x_position'] = alien_0['x_position'] + x_increment
 
 print(f"New position: {alien_0['x_position']}")
 
+
+#better and symplified way of writing python
 
 favourite_P_lang = {
     'jen': 'python',
@@ -176,3 +180,19 @@ for alien in aliens:
 #i was finally able to push you to git through git desktop
 
 
+print("\n")
+phonebook = {  
+    "John" : 938477566,
+    "Jack" : 938377264,
+    "Jill" : 947662781
+}  
+
+phonebook["Jake"] = 90312334
+del phonebook["Jill"] 
+
+# testing code
+if "Jake" in phonebook:  
+    print("Jake is listed in the phonebook.")
+    
+if "Jill" not in phonebook:      
+    print("Jill is not listed in the phonebook.") 

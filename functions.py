@@ -1,6 +1,13 @@
 #def is used to define a function
 #steps to define the functions are def then the function name e.g
 
+def Hey_PJ(name):
+    """I'm greeting PJ"""
+    print(f"I'm So happy to see you {name.title()}")
+Hey_PJ("Peters Jnr Eledu")
+
+
+
 def greet_user(username):
     """Display a simple greeting of love"""
     print(f"I love you, {username.title()}")
@@ -17,46 +24,46 @@ greet_user('Jesus')
 
 def Display_Message():
     """Display a simple Message"""
-    print(f"\n Hola! We are Learning fuctions in the module")
+    print(f"\t Hola! We are Learning fuctions in the module")
 
 Display_Message()
 
 def Book_title(name_of_book):
     """Accepts the book title and print the favourite book"""
-    print(f"The name of my favourite book is, {name_of_book.title()}!")
+    print(f"The name of my favourite book is, {name_of_book.upper()}!")
 
-Book_title('Alice in womderland')
+Book_title('alice in womderland')
 
 #funtion defination can have multiple parameters 
 #Positional Arguement can be called by their position in the function defination
 #keyword argument are arguments that can be called by their name.
 
 #positional parsing & Keyword
-def descirbe_pet(animal_type, pet_name, owner='Destiny'):
+def descirbe_pet(animal_type, pet_name, owner="Pj"):
     """display information about pet"""
     print(f"\nI have a {animal_type}.")
     print(f"My {animal_type}'s name is {pet_name.title()}, has an owner {owner}")
 
-descirbe_pet(pet_name='Desto', animal_type='Dami')
-descirbe_pet('Dog', 'werey')
+descirbe_pet('Dog', 'werey', 'me')
 descirbe_pet('goat', 'isaac')
 descirbe_pet('cow', 'blackson')
 
+descirbe_pet(animal_type='Desto', pet_name="you", owner="why")
 #task
 
-#task for shirts with different sizes and finally with 
-def make_shirt(size='Large', message='I love python'):
+#task for shirts with different sizes and finally with message gratitude
+def make_shirt(size='Large', message='I love python', Price="100000", Location="Canada"):
     """Print size and message of shirt"""
-    print(f"The shoe size {size} and shows the message {message}")
+    print(f"\nThe shirt size is {size} and shows the message {message}, \nIt Costs ${Price.title()} located in {Location.title()}")
 
 make_shirt()
-make_shirt('Medium')
+make_shirt('Medium', Location="Lagos")
 make_shirt('L', 'I really love za Pton')
     
 #task for display of cities with default country and finally with a different law
 def describe_city(city, country='United States'):
     """Prints the name of a city and it's country"""
-    print(f"{city.title()} is in {country.title()}.")
+    print(f"\n{city.title()} is in {country.title()}.")
 
 describe_city('New York')
 describe_city('chicago')
@@ -69,12 +76,23 @@ def get_formatted_name(first_name, last_name, middle_name=''):
     full_name = f"\n{first_name} {middle_name} {last_name} "
     return full_name.title()
 
-musician = get_formatted_name('jimi', 'jay')
-musician = get_formatted_name('Happy', 'People')
+MyName = get_formatted_name('jimi', 'jay')
+musician = get_formatted_name('Happy', 'People', 'Pj')
 print(musician)
+print(MyName)
+
+
+#1. Create a function with the name Get_Formatted_Name
+#2. Store in a var Full_Name
+#3. Pass the parameters firstname and lastname
+#4. use a loop for question and answer
+#5 introduce a break in condition met 
+
+
+
+
 
 #function into a dictionary 
-
 def build_person(firstname, lastname, age=None):
     """Return a dictionary of infomation about a person"""
     person = {'first': firstname, 'last': lastname}
@@ -91,7 +109,7 @@ def get_formattted_name(first_namee, last_namee):
     return fullnamee.title()
     
 while True:
-    print(f"\nPleasetell me your name")
+    print(f"\nPlease tell me your name")
     print("(Enter 'q' to quit execution)")
     f_name = input("First Name: ")
     if f_name == 'q':
@@ -108,6 +126,7 @@ def city_country(city_name, city_count):
     city = f"{city_name}, {city_count}"
     return f"\n{city_name.title()} {city_count.title()}"
 
+print(city_country("'Nigeria'", "'Destiny'"))
 print(city_country("'New York'", "'United States'"))
 print(city_country("'New Jersy'", "'america'"))
 print(city_country("'Land", "'Destiny Obs'"))
